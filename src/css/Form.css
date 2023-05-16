@@ -1,0 +1,60 @@
+
+.container__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.5em 5em 2.5em 5.5em;
+    width: 100%;
+    /* font-size: 3rem; */
+}
+
+.form__plans-container{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 1em;
+    margin-top: 2em;
+}
+
+.form__plans-container--column{
+    flex-direction: column;
+}
+
+
+
+.form__title{
+    color: var(--marine-blue);
+    font-size: 1.9rem;
+    margin-bottom: .3em;
+}
+
+.form__description{
+    color: var(--cool-gray);
+    font-weight: 400;
+    font-size: .95rem;
+    
+}
+
+.form__btn{
+    align-self: self-end;
+    border-style: none;
+    padding: 1em 1.7em;
+    border-radius: 7px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.form__btn--next{
+    background: var(--marine-blue);
+    color: var(--white);
+}
+
+.form__btn--back{
+    background: var(--white);
+    color: var(--cool-gray);
+}

@@ -1,0 +1,32 @@
+
+
+
+/* FORM STEP 2 PLANS */
+
+.form__plan{
+    border: 1px solid var(--light-gray);
+    padding: 1em 0 .9em .7em;
+    width: calc(100%/3);
+    border-radius: 5px;
+}
+.form__plan:hover{
+    background: var(--magnolia);
+    border-color: var(--marine-blue) ;
+}
+
+.plan__img{
+    margin-bottom:2em;
+    width: 2.3em;
+    
+}
+
+.form__plan h5{
+    margin-bottom: 5px;
+    color: var(--marine-blue);
+    font-weight: 600;
+    font-size: .9rem;
+}
+
+.form__plan h6{
+    color: var(--cool-gray);
+}

@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    outline: none;
+    /* outline: 1px dashed #f00; */
+    
+    
+}
+
+:root{
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+}
+
+.App{
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+    background:var(--magnolia);
+}
+
+.App__container{
+    background: var(--white);
+    display: flex;
+    border-radius: 10px;
+    padding: 1em;
+    height: unset;
+    width: 940px;
+}
+
+
+
