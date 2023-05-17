@@ -8,50 +8,47 @@ import "../css/FormStep2.css";
 
 
 function Form() {
-    // const [currentStep, setCurrentStep] = useState(1);
-    // const [formFlexColumn, setFormFlexColumn] = useState(true);
+    const [currentStep, setCurrentStep] = useState(1);
+    const [formFlexColumn, setFormFlexColumn] = useState(true);
 
-    // const changeStep = (newStep = 1) => {
-    //     if (newStep === 1) {
-    //         setCurrentStep(newStep);
-    //         setFormFlexColumn(true);
-    //         return <FormStep1 />
+    const changeStep = (newStep = 1) => {
+        setCurrentStep(newStep);
 
-    //     } else if (newStep === 2) {
-    //         setCurrentStep(newStep);
-    //         setFormFlexColumn(false);
-    //         return <FormStep2 />
-    //     }
-    // }
-    // const changeStep = (newStep = 1) => {
-    //     if (newStep === 1) return <FormStep1 />
-    //     else if (newStep === 2) return <FormStep2 />
-
-    // }
-
+        switch (newStep) {
+            case 1:
+                setFormFlexColumn(true);
+                break;
+            case 2:
+                setFormFlexColumn(false);
+                break;
+            default:
+                setFormFlexColumn(true);
+                break;
+        }
+    };
 
 
     const manejarEnvio = (e) => {
         e.preventDefault();
+    };
+    // console.log(4 === 1 ? "FormStep1" : 4 === 2 ? "FormStep2" : 4 === 3 ? "FormStep3" : "FormStep4");
 
-    }
 
     return (
-        <form className='container__form' onSubmit={manejarEnvio} >
+        <form className='container__form' onSubmit={manejarEnvio}>
 
             <div>
                 <header>
-                    <FormHeader id={2} />
+                    <FormHeader id={currentStep} />
                 </header>
 
-                <main className={false ? "form__plans-container form__plans-container--column" : "form__plans-container"}>
-                    {<FormStep2 />}
+                <main className={formFlexColumn ? "form__plans-container form__plans-container--column" : "form__plans-container"}>
+                    {currentStep === 1 ? <FormStep1 /> : <FormStep2 />}
                 </main>
             </div>
-
             <footer className="btn-container">
-                <Button btnType={"back"} text={"Go Back"} />
-                <Button btnType={"next"} text={"Next Step"} />
+                <Button btnType={"back"} text={"Go Back"} currentStep={currentStep} changeStep={changeStep} />
+                <Button btnType={"next"} text={"Next Step"} currentStep={currentStep} changeStep={changeStep} />
             </footer>
 
         </form>
