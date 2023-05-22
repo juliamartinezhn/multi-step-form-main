@@ -1,3 +1,4 @@
+/* FORM */
 
 .container__form{
     display: flex;
@@ -8,18 +9,12 @@
     /* font-size: 3rem; */
 }
 
-.form__plans-container{
+.form__main{
     display: flex;
-    /* justify-content: space-between; */
-    gap: 1em;
+    flex-direction: column;
+    gap: 1.2em;
     margin-top: 2em;
 }
-
-.form__plans-container--column{
-    flex-direction: column;
-}
-
-
 
 .form__title{
     color: var(--marine-blue);
@@ -30,31 +25,14 @@
 .form__description{
     color: var(--cool-gray);
     font-weight: 400;
-    font-size: .95rem;
-    
+    font-size: .95rem;    
 }
 
-.form__btn{
-    align-self: self-end;
-    border-style: none;
-    padding: 1em 1.7em;
-    border-radius: 7px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.btn-container{
+.form__footer{
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-between;   
 }
 
-.form__btn--next{
-    background: var(--marine-blue);
-    color: var(--white);
-}
 
-.form__btn--back{
-    background: var(--white);
-    color: var(--cool-gray);
-}
+
+

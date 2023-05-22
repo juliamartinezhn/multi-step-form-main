@@ -1,6 +1,6 @@
 import "../css/StepsAsideBar.css";
 
-function StepsAsideBar({ }) {
+function StepsAsideBar(props) {
     return (
         <aside className='container__steps-aside'>
             <StepElement number={"1"} description={"YOUR INFO"} />

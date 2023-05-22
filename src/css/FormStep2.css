@@ -1,7 +1,19 @@
+/* STEP 2 - SELECT YOUR PLAN */
 
+.form__plan-container{
+    display: flex;
+    gap: 0 1em;
+}
 
+input[name="form__plan"]{
+    appearance: none;
+    position: absolute;
+}
 
-/* FORM STEP 2 PLANS */
+input[name="form__plan"]:checked + .form__plan{
+    background: var(--magnolia);
+    border-color: var(--marine-blue) ;
+}
 
 .form__plan{
     border: 1px solid var(--light-gray);
@@ -9,9 +21,10 @@
     width: calc(100%/3);
     border-radius: 5px;
 }
+
 .form__plan:hover{
-    background: var(--magnolia);
     border-color: var(--marine-blue) ;
+    
 }
 
 .plan__img{
@@ -24,9 +37,23 @@
     margin-bottom: 5px;
     color: var(--marine-blue);
     font-weight: 600;
-    font-size: .9rem;
+    font-size: 1rem;
 }
 
 .form__plan h6{
     color: var(--cool-gray);
+    font-weight: 500;
+    font-size: .87rem;
+    
 }
+
+.promotion{
+    margin-top: 8px;
+    font-size: .8rem;
+    color: var(--marine-blue);
+    font-weight: 500;
+
+}
+
+
+

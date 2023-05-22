@@ -1,31 +1,29 @@
 
-import { useState } from 'react';
+import "../css/Button.css"
 
-function Button({ btnType, text, currentStep, changeStep }) {
+function Button({ btnType, text, onClick }) {
     // currentStep = [numberStep, formFlexColumn]
     // const [currentStep, setCurrentStep] = useState(1);
 
-    const setStep = () => {
-        (btnType === "next") ? manejarNext() : (btnType === "back") ? manejarBack() : console.log("CONFIRM");
-        changeStep(currentStep);
-        console.log("===============================")
-        console.log(currentStep)
+    // const setStep = () => {
+    //     (btnType === "next") ? goPextButton() : (btnType === "back") ? goPrevButton() : console.log("CONFIRM");
+    //     changeStep(currentStep);
+    //     // console.log("===============================")
+    //     // console.log(currentStep)
 
-    }
+    // }
 
-    const manejarNext = () => {
-        currentStep += 1;
+    // const goPextButton = () => {
+    //     currentStep += 1;
 
-    }
+    // }
 
-    const manejarBack = () => {
-        currentStep -= 1;
-    }
-
-
+    // const goPrevButton = () => {
+    //     currentStep -= 1;
+    // }
 
     return (
-        <button className={"form__btn form__btn--" + btnType} onClick={setStep}>
+        <button className={"form__btn form__btn--" + btnType} onClick={onClick} >
             {text}
         </button>
     );
