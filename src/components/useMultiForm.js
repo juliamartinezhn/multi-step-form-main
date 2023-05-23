@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 const useMultiForm = (formStep) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(1);
 
     const goBackwards = () => {
-        if (currentIndex === 0) return;
+        if (currentIndex === 1) return;
         setCurrentIndex((prev) => prev - 1);
     };
 
@@ -23,7 +23,7 @@ const useMultiForm = (formStep) => {
         goForwards,
         goBackwards,
         goToSection,
-        isFirstStep: currentIndex === 0,
+        isFirstStep: currentIndex === 1,
         isLastStep: currentIndex === formStep - 2,
         isConfirmation: currentIndex === formStep - 1,
     };

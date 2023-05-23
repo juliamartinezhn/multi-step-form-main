@@ -1,12 +1,12 @@
 import '../css/Slider.css';
 import { useState } from 'react';
 
-function Slider({ sendPlan }) {
-    const [isMonthly, setIsMonthly] = useState(true);
+function Slider({ initial, sliderChosenPlan }) {
+    const [isMonthly, setIsMonthly] = useState(initial);
 
     const handleToggle = () => {
         setIsMonthly(!isMonthly);
-        sendPlan(isMonthly);
+        sliderChosenPlan(isMonthly);
 
     };
 
@@ -14,7 +14,7 @@ function Slider({ sendPlan }) {
         <div className="slider-container">
             <span className={`slider-option ${isMonthly ? 'active' : ''}`}>Monthly</span>
             <label className="switch">
-                <input type="checkbox" checked={!isMonthly} onChange={handleToggle} />
+                <input id='slider' name='slider' type="checkbox" checked={!isMonthly} onChange={handleToggle} />
                 <span className="slider round"></span>
             </label>
             <span className={`slider-option ${!isMonthly ? 'active' : ''}`}>Yearly</span>

@@ -1,13 +1,6 @@
-import { useState } from "react";
 import FormInput from "./FormInput.js"
 
-function FormStep1() {
-
-    const [values, setValues] = useState({
-        name: "",
-        email: "",
-        phone: "",
-    });
+function FormStep1({ name, email, phone, updateForm }) {
 
     const inputs = [
         {
@@ -20,6 +13,8 @@ function FormStep1() {
             pattern: "[A-Za-z ]{3,}",
             minLength: "3",
             required: true,
+            autoFocus: true,
+            autoComplete: "given-name",
         },
         {
             id: 2,
@@ -30,6 +25,7 @@ function FormStep1() {
             errorMessage: "Invalid email! e.g. stephenking@lorem.com",
             pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}",
             required: true,
+            autoComplete: "email",
         },
         {
             id: 3,
@@ -42,12 +38,9 @@ function FormStep1() {
             minLength: "9",
             maxLength: "9",
             required: true,
+            autoComplete: "tel",
         }
     ]
-
-    const onChange = (e) => {
-        setValues({ ...values, [e.target.name]: e.target.value });
-    };
 
     return (
         <>
@@ -55,8 +48,8 @@ function FormStep1() {
                 <FormInput
                     key={input.id}
                     {...input}
-                    value={values[input.name]}
-                    onChange={onChange}
+                    value={input.id === 1 ? name : input.id === 2 ? email : phone}
+                    onChange={(e) => updateForm({ [input.name]: e.target.value })}
                 />
             ))}
 
