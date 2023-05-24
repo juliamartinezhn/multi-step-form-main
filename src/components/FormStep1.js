@@ -14,7 +14,7 @@ function FormStep1({ name, email, phone, updateForm }) {
             minLength: "3",
             required: true,
             autoFocus: true,
-            autoComplete: "given-name",
+            autoComplete: "off",
         },
         {
             id: 2,
@@ -25,7 +25,7 @@ function FormStep1({ name, email, phone, updateForm }) {
             errorMessage: "Invalid email! e.g. stephenking@lorem.com",
             pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}",
             required: true,
-            autoComplete: "email",
+            autoComplete: "off",
         },
         {
             id: 3,
@@ -38,7 +38,7 @@ function FormStep1({ name, email, phone, updateForm }) {
             minLength: "9",
             maxLength: "9",
             required: true,
-            autoComplete: "tel",
+            autoComplete: "off",
         }
     ]
 
@@ -52,7 +52,6 @@ function FormStep1({ name, email, phone, updateForm }) {
                     onChange={(e) => updateForm({ [input.name]: e.target.value })}
                 />
             ))}
-
         </>
     );
 

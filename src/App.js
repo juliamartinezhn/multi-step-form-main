@@ -1,9 +1,14 @@
 import './App.css';
 import StepsAsideBar from './components/StepsAsideBar';
 import Form from './components/Form';
-
+// import { useState } from 'react';
 
 function App() {
+  // const [current, setCurrent] = useState(1);
+
+  // const currentStep = (current) => {
+  //   setCurrent(current);
+  // }
 
   return (
     <div className="App">
@@ -11,7 +16,6 @@ function App() {
 
         <StepsAsideBar />
         <Form />
-        {/* {chooseStep(currentStep)} */}
 
       </div>
     </div>

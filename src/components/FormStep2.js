@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import plan_arcade_img from "../assets/images/icon-arcade.svg";
 import plan_advanced_img from "../assets/images/icon-advanced.svg";
 import plan_pro_img from "../assets/images/icon-pro.svg";
@@ -16,7 +16,7 @@ function FormStep2({ plan, planType, updateForm }) {
             src: plan_arcade_img,
             priceMonthly: "9",
             priceYearly: "90",
-            checked: (plan === "Arcade") ? true : false
+            checked: plan === "Arcade"
         },
         {
             id: 2,
@@ -24,7 +24,7 @@ function FormStep2({ plan, planType, updateForm }) {
             src: plan_advanced_img,
             priceMonthly: "12",
             priceYearly: "120",
-            checked: (plan === "Advanced") ? true : false
+            checked: plan === "Advanced"
         },
         {
             id: 3,
@@ -32,7 +32,7 @@ function FormStep2({ plan, planType, updateForm }) {
             src: plan_pro_img,
             priceMonthly: "15",
             priceYearly: "150",
-            checked: (plan === "Pro") ? true : false
+            checked: plan === "Pro"
         }
     ]
 
@@ -49,11 +49,11 @@ function FormStep2({ plan, planType, updateForm }) {
                     <FormPlan
                         key={plan.id}
                         {...plan}
-                        price={"$" + monthly
-                            ? plan.priceMonthly + "/mo"
-                            : plan.priceYearly + "/yr"}
+                        price={monthly
+                            ? "$" + plan.priceMonthly + "/mo"
+                            : "$" + plan.priceYearly + "/yr"}
                         promotion={monthly ? "" : <p className="promotion">2 months free</p>}
-                        onChange={(e) => updateForm({ plan: e.target.value, planType: monthly ? true : false })}
+                        onChange={(e) => updateForm({ plan: e.target.value, planType: monthly })}
                     />
                 ))}
 

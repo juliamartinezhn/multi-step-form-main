@@ -22,6 +22,7 @@
     color: var(--marine-blue);
     font-weight: 500;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .form__input::placeholder {
@@ -30,7 +31,8 @@
     color: var(--cool-gray);
 }
 
-.form__input:focus {
+.form__input:focus,
+.form__input:hover {
     outline: 1px solid var(--cool-gray);
 }
 
@@ -38,14 +40,14 @@
 /* ERRORS */
 
 .form__error {
-    color: #f00;
+    color: var(--strawberry-red);
     font-size: .9rem;
     font-weight: 600;
     display: none;
 }
 
 .form__input:invalid[focused="true"] {
-    border-color: #f00;
+    border-color: var(--strawberry-red);
     outline: none;
 }
 

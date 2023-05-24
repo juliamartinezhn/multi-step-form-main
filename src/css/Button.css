@@ -1,7 +1,8 @@
 .form__btn {
     align-self: self-end;
     border-style: none;
-    padding: 1em 1.7em;
+    padding: 1em 0;
+    width: 8rem;
     border-radius: 7px;
     font-weight: 500;
     cursor: pointer;
@@ -15,4 +16,20 @@
 .form__btn--back {
     background: var(--white);
     color: var(--cool-gray);
+}
+
+.form__btn--back:hover {
+    color: var(--marine-blue);
+}
+
+.form__btn--confirm {
+    background: var(--purplish-blue);
+    color: var(--white);
+}
+
+.form__btn--next:hover,
+.form__btn--confirm:hover {
+    opacity: .9;
+    transition: opacity .3s;
+    -webkit-transition: opacity .3s;
 }

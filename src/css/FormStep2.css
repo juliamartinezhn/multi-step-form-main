@@ -1,59 +1,56 @@
 /* STEP 2 - SELECT YOUR PLAN */
 
-.form__plan-container{
+.form__plan-container {
     display: flex;
     gap: 0 1em;
 }
 
-input[name="form__plan"]{
+input[name="form__plan"] {
     appearance: none;
     position: absolute;
 }
 
-input[name="form__plan"]:checked + .form__plan{
-    background: var(--magnolia);
-    border-color: var(--marine-blue) ;
+input[name="form__plan"]:checked+.form__plan {
+    background: var(--alabaster);
+    border-color: var(--purplish-blue);
 }
 
-.form__plan{
-    border: 1px solid var(--light-gray);
+.form__plan {
+    border: 1.7px solid var(--light-gray);
     padding: 1em 0 .9em .7em;
     width: calc(100%/3);
     border-radius: 5px;
 }
 
-.form__plan:hover{
-    border-color: var(--marine-blue) ;
-    
+.form__plan:hover {
+    border-color: var(--purplish-blue);
+
 }
 
-.plan__img{
-    margin-bottom:2em;
+.plan__img {
+    margin-bottom: 2em;
     width: 2.3em;
-    
+
 }
 
-.form__plan h5{
+.form__plan h5 {
     margin-bottom: 5px;
     color: var(--marine-blue);
     font-weight: 600;
     font-size: 1rem;
 }
 
-.form__plan h6{
+.form__plan h6 {
     color: var(--cool-gray);
     font-weight: 500;
     font-size: .87rem;
-    
+
 }
 
-.promotion{
+.promotion {
     margin-top: 8px;
     font-size: .8rem;
     color: var(--marine-blue);
     font-weight: 500;
 
 }
-
-
-

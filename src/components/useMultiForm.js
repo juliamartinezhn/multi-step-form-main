@@ -9,7 +9,7 @@ const useMultiForm = (formStep) => {
     };
 
     const goForwards = () => {
-        if (currentIndex === formStep - 1) return;
+        if (currentIndex === formStep) return;
         setCurrentIndex((prev) => prev + 1);
     };
 
@@ -24,8 +24,8 @@ const useMultiForm = (formStep) => {
         goBackwards,
         goToSection,
         isFirstStep: currentIndex === 1,
-        isLastStep: currentIndex === formStep - 2,
         isConfirmation: currentIndex === formStep - 1,
+        isThankYou: currentIndex === formStep,
     };
 };
 
