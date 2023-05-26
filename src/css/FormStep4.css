@@ -1,0 +1,67 @@
+.summary_divider {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form__summary-costs,
+.form__summary-total {
+    padding: 1em;
+}
+
+
+
+/* FORM SUMMARY COSTS */
+.form__summary-costs {
+    background: var(--magnolia);
+    border-radius: 10px;
+}
+
+.costs__plan {
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: .9em;
+    margin-bottom: .8em;
+}
+
+.costs__plan-name {
+    color: var(--marine-blue);
+    font-weight: 600;
+    margin-bottom: .4em;
+}
+
+.costs__plan-price {
+    color: var(--marine-blue);
+    font-weight: 600;
+}
+
+.costs__change-step {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.costs__change-step:hover {
+    color: var(--purplish-blue);
+}
+
+.costs__addOn {
+    margin-bottom: .8em;
+}
+
+.costs__addOn-price {
+    font-size: .8520rem;
+    color: var(--marine-blue);
+    font-weight: 500;
+}
+
+/* FORM SUMMARY TOTAL */
+.total-price {
+    font-size: 1.1rem;
+    color: var(--purplish-blue);
+    font-weight: 600;
+}
+
+.text {
+    font-size: .8520rem;
+    color: var(--cool-gray);
+    font-weight: 500;
+
+}

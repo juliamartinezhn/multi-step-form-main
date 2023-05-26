@@ -16,40 +16,32 @@
 .step-item {
     display: grid;
     grid-template-columns: repeat(2, max-content);
-
     margin-bottom: 2em;
     gap: .5em;
-
-    /* font-size: .7rem; */
     font-weight: 600;
     color: var(--white);
     letter-spacing: .5px;
-    cursor: pointer;
+    user-select: none;
 }
 
-.step-item:hover.step-item span {
-    background: var(--light-blue);
-    color: var(--marine-blue);
-    transition: all .3s;
-
-}
-
-.span--active {
-    background: var(--light-blue);
-    color: var(--marine-blue);
-}
 
 /* STEP NUMBER CIRCLE*/
-.step-item span {
+.step__number-circle {
     grid-area: 1 / 1 / 3 / 2;
     border: 1px solid var(--white);
     border-radius: 50%;
     width: 30px;
     height: 30px;
     font-size: .8rem;
-
     display: grid;
     place-items: center;
+}
+
+.circle--active {
+    background: var(--light-blue);
+    color: var(--marine-blue);
+    transition: all .20s;
+    -webkit-transition: all .20s;
 }
 
 /* STEP NUMBER */
