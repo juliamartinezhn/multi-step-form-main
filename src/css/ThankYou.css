@@ -1,0 +1,24 @@
+.main__thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    gap: 1em;
+}
+
+.thank-you__icon {
+    width: 20%;
+}
+
+.main__thank-you h1 {
+    font-size: 2rem;
+    color: var(--marine-blue);
+}
+
+.main__thank-you p {
+    line-height: 1.4em;
+    text-align: center;
+    color: var(--cool-gray);
+    font-size: 1.070rem;
+}

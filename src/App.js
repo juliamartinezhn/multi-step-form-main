@@ -6,6 +6,7 @@ import FormStep1 from "./components/FormStep1.js";
 import FormStep2 from "./components/FormStep2.js";
 import FormStep3 from "./components/FormStep3.js";
 import FormStep4 from "./components/FormStep4.js";
+import ThankYou from "./components/ThankYou.js";
 import Button from "./components/Button.js";
 import useMultiForm from './components/useMultiForm';
 
@@ -114,7 +115,7 @@ function App() {
                 <FormStep4 formData={formData} goToSection={goToSection} />
               )}
               {currentIndex === 5 && (
-                console.log("paso 5")
+                <ThankYou />
               )}
             </main>
           </div>
