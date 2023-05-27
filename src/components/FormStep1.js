@@ -1,4 +1,5 @@
-import FormInput from "./FormInput.js"
+import Step1FormInput from "./Step1FormInput.js";
+import "../css/FormStep1.css";
 
 function FormStep1({ name, email, phone, updateForm }) {
 
@@ -23,7 +24,7 @@ function FormStep1({ name, email, phone, updateForm }) {
             label: "Email Address",
             placeholder: "e.g. stephenking@lorem.com",
             errorMessage: "Invalid email! e.g. stephenking@lorem.com",
-            pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}",
+            pattern: "^[a-zA-Z0-9_]{1,}[a-zA-Z0-9_.+-]{0,}@[a-zA-Z0-9_-]{2,}([.][a-zA-Z]{2,}|[.][a-zA-Z0-9_-]{2,}[.][a-zA-Z]{2,})$",
             required: true,
             autoComplete: "off",
         },
@@ -45,7 +46,7 @@ function FormStep1({ name, email, phone, updateForm }) {
     return (
         <>
             {inputs.map((input) => (
-                <FormInput
+                <Step1FormInput
                     key={input.id}
                     {...input}
                     value={input.id === 1 ? name : input.id === 2 ? email : phone}

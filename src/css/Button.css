@@ -3,6 +3,7 @@
     border-style: none;
     padding: 1em 0;
     width: 8rem;
+
     border-radius: 7px;
     font-weight: 500;
     cursor: pointer;
@@ -32,4 +33,10 @@
     opacity: .9;
     transition: opacity .3s;
     -webkit-transition: opacity .3s;
+}
+
+@media (max-width:333px) {
+    .form__btn {
+        width: 7.2rem;
+    }
 }

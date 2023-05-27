@@ -4,10 +4,6 @@
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
-    /* outline: none; */
-    /* outline: 1px dashed #f00; */
-
-
 }
 
 :root {
@@ -42,43 +38,27 @@
     width: 940px;
 }
 
-/* FORM */
-
-.container__form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 2.5em 5em 2.5em 5.5em;
-    width: 100%;
-    /* font-size: 3rem; */
+.attribution,
+.attribution a {
+    font-size: .7rem;
 }
 
-.form__main {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2em;
-    margin-top: 2em;
+.attribution {
+    text-align: center;
 }
 
-.form__title {
-    color: var(--marine-blue);
-    font-size: 1.9rem;
-    margin-bottom: .3em;
+.attribution a {
+    color: var(--purplish-blue);
 }
-
-.form__description {
-    color: var(--cool-gray);
-    font-weight: 400;
-    font-size: .95rem;
-}
-
-.form__footer {
-    display: flex;
-    justify-content: space-between;
-}
-
 
 @media (max-width:1020px) {
+    .App__container {
+        width: 800px;
+    }
+
+}
+
+@media (max-width:850px) {
     .App {
         place-items: flex-start;
     }
@@ -89,23 +69,5 @@
         width: 100%;
         height: 100%;
     }
-
-    .container__form {
-        padding: 0 1.5em;
-        background: var(--magnolia);
-        height: 100%;
-    }
-
-    .container__form>div {
-        transform: translate(0px, -80px);
-        background: var(--white);
-        border-radius: 10px;
-        padding: 2.3em 2em 1em;
-    }
-
-    .form__footer {
-        transform: translate(0px, -50px);
-    }
-
 
 }

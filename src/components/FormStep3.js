@@ -1,7 +1,6 @@
 import "../css/FormStep3.css";
+import Step3FormOption from "./Step3FormOption.js";
 import checkMark from "../assets/images/icon-checkmark.svg";
-
-
 
 function FormStep3({ planType, isOnlineService, isLargerStorage, isCustomizableProfile, updateForm }) {
 
@@ -37,38 +36,13 @@ function FormStep3({ planType, isOnlineService, isLargerStorage, isCustomizableP
     return (
         <>
             {addOnsOptions.map(option => (
-                <FormOption key={option.id} {...option}
+                <Step3FormOption key={option.isBoolean} checkMark={checkMark} {...option}
                     onChange={e => updateForm({ [option.isBoolean]: e.target.checked })}
                     price={planType
                         ? "+$" + option.priceMonthly + "/mo"
                         : "+$" + option.priceYearly + "/yr"} />
             ))}
         </>
-    );
-}
-
-
-function FormOption({ id, addOnName, addOnDescription, checked, onChange, price }) {
-    return (
-        <label className={checked ? "form__option-container option-container--checked" : "form__option-container"} >
-            <div className="form__option-info">
-                <input id={id}
-                    className="option__input"
-                    type="checkbox"
-                    name={addOnName}
-                    value={addOnName}
-                    checked={checked}
-                    onChange={onChange}
-                    style={{ backgroundImage: `url(${checkMark})` }}
-                    autoComplete="off" />
-
-                <div>
-                    <p className="form__option-name" htmlFor={id} >{addOnName}</p>
-                    <p className="form__option-description">{addOnDescription}</p>
-                </div>
-            </div>
-            <span className="form__option-price">{price}</span>
-        </label>
     );
 }
 

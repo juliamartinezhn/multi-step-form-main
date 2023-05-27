@@ -9,6 +9,7 @@
 
 .thank-you__icon {
     width: 20%;
+    max-width: 95px;
 }
 
 .main__thank-you h1 {
@@ -21,4 +22,23 @@
     text-align: center;
     color: var(--cool-gray);
     font-size: 1.070rem;
+}
+
+@media (max-width:850px) {
+    .main__thank-you {
+        margin-top: 0;
+        justify-content: flex-start;
+        height: 19em;
+    }
+
+    .thank-you__icon {
+        max-width: 95px;
+        min-width: 63px;
+    }
+
+    .main__thank-you p {
+        font-size: 1.1rem;
+        max-width: 26em;
+    }
+
 }

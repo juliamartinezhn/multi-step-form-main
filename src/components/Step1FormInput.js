@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "../css/FormInput.css";
 
-function FormInput(props) {
+
+function Step1FormInput(props) {
     const { label, errorMessage, onChange, id, ...inputProps } = props;
 
     const [focused, setFocused] = useState(false);
@@ -30,4 +30,4 @@ function FormInput(props) {
     );
 };
 
-export default FormInput;
+export default Step1FormInput;

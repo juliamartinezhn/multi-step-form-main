@@ -1,5 +1,11 @@
 /* STEP 2 - SELECT YOUR PLAN */
 
+.main__step-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
 .form__plan-container {
     display: flex;
     gap: 0 1em;
@@ -15,26 +21,29 @@ input[name="form__plan"]:checked+.form__plan {
     border-color: var(--purplish-blue);
 }
 
+
+
 .form__plan {
     border: 1.7px solid var(--light-gray);
     padding: 1em 0 .9em .7em;
     width: calc(100%/3);
     border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
 }
 
 .form__plan:hover {
     border-color: var(--purplish-blue);
-
 }
 
 .plan__img {
-    margin-bottom: 2em;
-    width: 2.3em;
-
+    width: 2.5em;
+    margin-bottom: 2.5em;
 }
 
 .form__plan h5 {
-    margin-bottom: 5px;
     color: var(--marine-blue);
     font-weight: 600;
     font-size: 1rem;
@@ -44,13 +53,33 @@ input[name="form__plan"]:checked+.form__plan {
     color: var(--cool-gray);
     font-weight: 500;
     font-size: .87rem;
-
 }
 
 .promotion {
-    margin-top: 8px;
     font-size: .8rem;
     color: var(--marine-blue);
     font-weight: 500;
+}
+
+@media (max-width:850px) {
+
+    .form__plan-container {
+        flex-direction: column;
+        gap: 1em 0;
+    }
+
+    .form__plan {
+        width: 100%;
+        padding: 1em 0 1em 0.7em;
+        gap: .3em .8em;
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+
+    }
+
+    .plan__img {
+        grid-area: 1 / 1 / 4 / 2;
+        margin-bottom: 0;
+    }
 
 }
